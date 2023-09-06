@@ -1,0 +1,32 @@
+<Window x:Class="LUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LUI"
+        mc:Ignorable="d"
+        Title="Lenovo Update Identifier" Height="240.99" Width="436.892"
+        Icon="/LUI;component/Images/lenovo2.png"
+        ResizeMode="NoResize">
+    <Grid Margin="0,0,-6,7">
+        <Border BorderThickness="1" BorderBrush="LightGray" Padding="10" Margin="17,10,22,57">
+        </Border>
+        <Label Name="lbl_status" Content="" HorizontalAlignment="Left" Margin="84,20,0,0" VerticalAlignment="Top"/>
+        <Label Name="lbl2" Content="Tenancy:" HorizontalAlignment="Left" Margin="25,59,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="drpbox_tenancy"
+            SelectedIndex="0"
+            SelectionChanged="select_tenancy"
+            HorizontalAlignment="Left" Margin="85,61,0,0" VerticalAlignment="Top" Width="196"/>
+        <Button Name="btn_check_updates" Content="Check Updates" HorizontalAlignment="Left" Margin="296,61,0,0" VerticalAlignment="Top" Width="96" Click="check_updates" Height="22"/>
+        <Button Name="btn_select_updates" Content="Select Updates" HorizontalAlignment="Left" Margin="296,101,0,0" VerticalAlignment="Top" Width="96" Click="select_update_btn_click" Height="22"/>
+        <ComboBox x:Name="drpbox_models"
+            SelectedIndex="0"
+            SelectionChanged="select_model"
+            HorizontalAlignment="Left" Margin="85,101,0,0" VerticalAlignment="Top" Width="196"/>
+        <Label x:Name="lbl2_Copy" Content="Model:" HorizontalAlignment="Left" Margin="33,99,0,0" VerticalAlignment="Top"/>
+        <Border BorderThickness="1" BorderBrush="LightGray" Padding="10" Margin="17,148,22,6"/>
+        <Label x:Name="lbl_misc" Content="Misc:" HorizontalAlignment="Left" Margin="42,155,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btn_find_sdp" Content="Find SDP" HorizontalAlignment="Left" Margin="85,157,0,0" VerticalAlignment="Top" Width="96" Click="find_sdp_btn_click" Height="22"/>
+        <Label x:Name="lbl_state" Content="Status:" HorizontalAlignment="Left" Margin="35,20,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
